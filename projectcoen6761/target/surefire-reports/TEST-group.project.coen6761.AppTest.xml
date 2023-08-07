@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="group.project.coen6761.AppTest" time="0.213" tests="22" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="20"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/akashrajmohan/Documents/Summer_2023/Testing and Validation/Deliverable_3/projectcoen6761/target/test-classes:/Users/akashrajmohan/Documents/Summer_2023/Testing and Validation/Deliverable_3/projectcoen6761/target/classes:/Users/akashrajmohan/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/akashrajmohan/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/akashrajmohan/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/akashrajmohan/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/akashrajmohan/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/Users/akashrajmohan/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/Users/akashrajmohan/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="20"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/20.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/akashrajmohan/Documents/Summer_2023/Testing and Validation/Deliverable_3/projectcoen6761/target/surefire/surefirebooter11636126147889415482.jar /Users/akashrajmohan/Documents/Summer_2023/Testing and Validation/Deliverable_3/projectcoen6761/target/surefire 2023-08-04T13-05-55_912-jvmRun1 surefire16140455765571364029tmp surefire_0600704398185145937tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/akashrajmohan/Documents/Summer_2023/Testing and Validation/Deliverable_3/projectcoen6761/target/test-classes:/Users/akashrajmohan/Documents/Summer_2023/Testing and Validation/Deliverable_3/projectcoen6761/target/classes:/Users/akashrajmohan/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/akashrajmohan/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/akashrajmohan/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/akashrajmohan/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/akashrajmohan/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/Users/akashrajmohan/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/Users/akashrajmohan/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/akashrajmohan"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-04-18"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/20.0.1/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/akashrajmohan/Documents/Summer_2023/Testing and Validation/Deliverable_3/projectcoen6761"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/akashrajmohan/Documents/Summer_2023/Testing and Validation/Deliverable_3/projectcoen6761/target/surefire/surefirebooter11636126147889415482.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="20.0.1"/>
+    <property name="user.name" value="akashrajmohan"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="12.4"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/akashrajmohan/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/vq/jhxryzz90s7b3p9d45hb6sv00000gp/T/"/>
+    <property name="java.version" value="20.0.1"/>
+    <property name="user.dir" value="/Users/akashrajmohan/Documents/Summer_2023/Testing and Validation/Deliverable_3/projectcoen6761"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/akashrajmohan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="20.0.1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="64.0"/>
+  </properties>
+  <testcase name="testRoomPrintNonEmptyRoom" classname="group.project.coen6761.AppTest" time="0.084"/>
+  <testcase name="testRoomConstructor" classname="group.project.coen6761.AppTest" time="0.003"/>
+  <testcase name="testRobotTurningRightAndLeft" classname="group.project.coen6761.AppTest" time="0.002"/>
+  <testcase name="testRoomPrintEmptyRoomWithPenUp" classname="group.project.coen6761.AppTest" time="0.002"/>
+  <testcase name="testRobotTurningRight" classname="group.project.coen6761.AppTest" time="0.004"/>
+  <testcase name="testRobotMoveEastBeyondRoomBounds" classname="group.project.coen6761.AppTest" time="0.005">
+    <system-out><![CDATA[******Oppps, Cant go further change the direction.******
+
+]]></system-out>
+  </testcase>
+  <testcase name="testRobotSettingPenUp" classname="group.project.coen6761.AppTest" time="0.004"/>
+  <testcase name="testRobotInitialPosition" classname="group.project.coen6761.AppTest" time="0.002"/>
+  <testcase name="testRobotMoveNorthBeyondRoomBounds" classname="group.project.coen6761.AppTest" time="0.003">
+    <system-out><![CDATA[******Oppps, Cant go further change the direction.******
+
+]]></system-out>
+  </testcase>
+  <testcase name="testRoomPrint_2" classname="group.project.coen6761.AppTest" time="0.002"/>
+  <testcase name="testRoomPrint" classname="group.project.coen6761.AppTest" time="0.001"/>
+  <testcase name="testRobotSettingPenUpAndDownWithInitialDirection" classname="group.project.coen6761.AppTest" time="0.004"/>
+  <testcase name="testRoomPrintEmptyRoom" classname="group.project.coen6761.AppTest" time="0.002"/>
+  <testcase name="testRoomPrintFullRoom_2" classname="group.project.coen6761.AppTest" time="0.003">
+    <system-out><![CDATA[2
+1
+]]></system-out>
+  </testcase>
+  <testcase name="testRobotSettingPenDown" classname="group.project.coen6761.AppTest" time="0.002"/>
+  <testcase name="testRobotSettingPosition" classname="group.project.coen6761.AppTest" time="0.001"/>
+  <testcase name="testRoomConstructor_2" classname="group.project.coen6761.AppTest" time="0.001"/>
+  <testcase name="testRobotSettingPenUpAndDown" classname="group.project.coen6761.AppTest" time="0.001"/>
+  <testcase name="testRobotTurningLeft" classname="group.project.coen6761.AppTest" time="0.001"/>
+  <testcase name="testRobotMoveWestBeyondRoomBounds" classname="group.project.coen6761.AppTest" time="0.003"/>
+  <testcase name="testRobotMoveWestWithPenUp" classname="group.project.coen6761.AppTest" time="0.002"/>
+  <testcase name="testRobotMoveSouthBeyondRoomBounds" classname="group.project.coen6761.AppTest" time="0.002"/>
+</testsuite>

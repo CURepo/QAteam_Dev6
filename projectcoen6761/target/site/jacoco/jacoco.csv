@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+projectcoen6761,group.project.coen6761,controler,148,0,30,0,51,0,21,0,2,0
+projectcoen6761,group.project.coen6761,Robot,44,67,2,0,9,21,4,6,3,6
+projectcoen6761,group.project.coen6761,App,97,236,11,23,30,50,15,9,6,1
+projectcoen6761,group.project.coen6761,Robot.Direction,0,27,0,0,0,2,0,1,0,1
+projectcoen6761,group.project.coen6761,Room,0,46,0,4,0,8,0,4,0,2

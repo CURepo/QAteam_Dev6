@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>App.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">projectcoen6761</a> &gt; <a href="index.source.html" class="el_package">group.project.coen6761</a> &gt; <span class="el_source">App.java</span></div><h1>App.java</h1><pre class="source lang-java linenums">package group.project.coen6761;
+
+import java.util.Scanner;
+
+import group.project.coen6761.Robot.Direction;
+
+<span class="nc" id="L7">public class App </span>
+{
+	///...the instance of Room class
+	public static Room room;
+	//....the instance of Robot
+	public static Robot robot;
+	public static String getNumber(String c) {
+		///....checking for M
+<span class="nc" id="L15">		String finalString=c.trim().replaceAll(&quot;\\s&quot;, &quot;&quot;).toLowerCase();</span>
+<span class="nc bnc" id="L16" title="All 2 branches missed.">		if(finalString.contains(&quot;m&quot;)){</span>
+<span class="nc" id="L17">			int m=finalString.indexOf(&quot;m&quot;);</span>
+<span class="nc" id="L18">			String index=finalString.substring(m+1,finalString.length());</span>
+//			System.out.println(index);
+<span class="nc" id="L20">			return index;</span>
+		}
+		///....checking for I
+		else {	
+<span class="nc" id="L24">			int m=finalString.indexOf(&quot;i&quot;);</span>
+<span class="nc" id="L25">			String index=finalString.substring(m+1,finalString.length());</span>
+//			System.out.println(index);
+<span class="nc" id="L27">			return index;</span>
+		}
+	}
+
+	public static String convertInput(String c) {
+		///....checking for M
+<span class="nc" id="L33">		String finalString=c.trim().replaceAll(&quot;\\s&quot;, &quot;&quot;).toLowerCase();</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">		if(finalString.contains(&quot;m&quot;)){</span>
+<span class="nc" id="L35">			return &quot;m&quot;;</span>
+		}
+		///....checking for I
+<span class="nc" id="L38">		return &quot;i&quot;;</span>
+	}
+	
+	public static void initiateTheRoom(String n) {
+<span class="nc" id="L42">		int size=Integer.parseInt(n);</span>
+<span class="nc" id="L43">		room=new Room(size);</span>
+<span class="nc" id="L44">		robot=new Robot();</span>
+//		room.room[room.room.length-1][0]=1;
+<span class="nc" id="L46">	}</span>
+	public static void printThCurrentPositionOfRobot() {
+<span class="nc" id="L48">		robot.print();</span>
+<span class="nc" id="L49">	}</span>
+	public static void move(String s) {
+<span class="fc" id="L51">		int space=Integer.parseInt(s);</span>
+		///...EAST
+<span class="fc bfc" id="L53" title="All 2 branches covered.">		if(robot.direction==Direction.East) {</span>
+		 try {
+<span class="fc" id="L55">			int newXPosition=0;</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">			for(int i=0;i&lt;=space;i++) {</span>
+<span class="pc bpc" id="L57" title="1 of 2 branches missed.">					if(newXPosition&gt;=room.room.length) {</span>
+<span class="nc" id="L58">						System.out.println(&quot;******Oppps, Cant go further change the direction.******\n&quot;);</span>
+<span class="nc" id="L59">						break;</span>
+					}else {
+<span class="fc" id="L61">						newXPosition=(robot.x+i);</span>
+<span class="pc bpc" id="L62" title="1 of 2 branches missed.">						if(robot.pen==true)</span>
+<span class="fc" id="L63">						room.room[room.room.length-1-robot.y][newXPosition]=1;					</span>
+					}
+			}
+<span class="fc" id="L66">			robot.setXY(newXPosition, robot.y);</span>
+<span class="fc" id="L67">			}catch(ArrayIndexOutOfBoundsException e){</span>
+<span class="fc" id="L68">				robot.setXY(room.room.length-1, robot.y);</span>
+<span class="fc" id="L69">				System.out.println(&quot;******Oppps, Cant go further change the direction.******\n&quot;);</span>
+<span class="fc" id="L70">			}</span>
+		}
+		///...WEST
+<span class="fc bfc" id="L73" title="All 2 branches covered.">		else if(robot.direction==Direction.West) {</span>
+			try {
+<span class="fc" id="L75">				int newXPosition=0;</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">				for(int i=0;i&lt;=space;i++) {</span>
+<span class="pc bpc" id="L77" title="1 of 2 branches missed.">						if(newXPosition&lt;0) {</span>
+<span class="nc" id="L78">							System.out.println(&quot;******Oppps, Cant go further change the direction.******\n&quot;);</span>
+<span class="nc" id="L79">							break;</span>
+						}else {
+<span class="fc" id="L81">							newXPosition=(robot.x-i);</span>
+<span class="fc" id="L82">							System.out.println(newXPosition);</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">							if(robot.pen==true)</span>
+<span class="fc" id="L84">							room.room[room.room.length-1-robot.y][newXPosition]=1;					</span>
+						}
+				}
+<span class="fc" id="L87">				robot.setXY(newXPosition, robot.y);</span>
+<span class="fc" id="L88">				}catch(ArrayIndexOutOfBoundsException e){</span>
+<span class="fc" id="L89">					robot.setXY(0, robot.y);</span>
+<span class="fc" id="L90">					System.out.println(&quot;******Oppps, Cant go further change the direction.******\n&quot;);</span>
+<span class="fc" id="L91">				}</span>
+		}
+		///....NORTH
+<span class="fc bfc" id="L94" title="All 2 branches covered.">		else if(robot.direction==Direction.North) {</span>
+			try {
+<span class="fc" id="L96">				int newYPosition=0;</span>
+<span class="fc bfc" id="L97" title="All 2 branches covered.">				for(int j=0;j&lt;=space;j++) {</span>
+<span class="pc bpc" id="L98" title="1 of 2 branches missed.">						if(newYPosition&gt;=room.room.length) {</span>
+<span class="nc" id="L99">							System.out.println(&quot;******Oppps, Cant go further change the direction.******\n&quot;);</span>
+<span class="nc" id="L100">							break;</span>
+						}else {
+<span class="fc" id="L102">							newYPosition=(robot.y+j);</span>
+<span class="pc bpc" id="L103" title="1 of 2 branches missed.">							if(robot.pen==true)</span>
+<span class="fc" id="L104">							room.room[room.room.length-1-newYPosition][robot.x]=1;					</span>
+						}
+				}
+<span class="fc" id="L107">				robot.setXY(robot.x, newYPosition);</span>
+<span class="fc" id="L108">				}catch(ArrayIndexOutOfBoundsException e){</span>
+<span class="fc" id="L109">					robot.setXY(robot.x,room.room.length-1);</span>
+<span class="fc" id="L110">					System.out.println(&quot;******Oppps, Cant go further change the direction.******\n&quot;);</span>
+<span class="fc" id="L111">				}</span>
+		}
+		///....SOUTH
+		else {
+			try {
+<span class="fc" id="L116">				int newYPosition=0;</span>
+<span class="fc bfc" id="L117" title="All 2 branches covered.">				for(int j=0;j&lt;=space;j++) {</span>
+<span class="pc bpc" id="L118" title="1 of 2 branches missed.">						if(newYPosition&lt;0) {</span>
+<span class="nc" id="L119">							System.out.println(&quot;******Oppps, Cant go further change the direction.******\n&quot;);</span>
+<span class="nc" id="L120">							break;</span>
+						}else {
+<span class="fc" id="L122">							newYPosition=(robot.y-j);</span>
+<span class="pc bpc" id="L123" title="1 of 2 branches missed.">							if(robot.pen==true)</span>
+<span class="fc" id="L124">							room.room[room.room.length-1-newYPosition][robot.x]=1;					</span>
+						}
+				}
+<span class="fc" id="L127">				robot.setXY(robot.x, newYPosition);</span>
+<span class="fc" id="L128">				}catch(ArrayIndexOutOfBoundsException e){</span>
+<span class="fc" id="L129">					robot.setXY(robot.x,room.room.length-1);</span>
+<span class="fc" id="L130">					System.out.println(&quot;******Oppps, Cant go further change the direction.******\n&quot;);</span>
+<span class="fc" id="L131">				}</span>
+			}
+<span class="fc" id="L133">	}</span>
+//	public static void run() {
+//	   
+//	}
+	public static void main( String[] args )
+    {
+<span class="nc" id="L139">		controler c= new controler();</span>
+<span class="nc" id="L140">		c.run();</span>
+<span class="nc" id="L141">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

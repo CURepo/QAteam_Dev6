@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>controler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">projectcoen6761</a> &gt; <a href="index.source.html" class="el_package">group.project.coen6761</a> &gt; <span class="el_source">controler.java</span></div><h1>controler.java</h1><pre class="source lang-java linenums">package group.project.coen6761;
+
+import java.util.Scanner;
+
+<span class="nc" id="L5">public class controler {</span>
+	public void run() {
+<span class="nc" id="L7">		 Scanner scanner = new Scanner(System.in);</span>
+<span class="nc" id="L8">	        String choice = &quot;&quot;;</span>
+<span class="nc" id="L9">	        boolean isStarted=false;</span>
+<span class="nc bnc" id="L10" title="All 2 branches missed.">	        while (!choice.equalsIgnoreCase(&quot;Q&quot;)) {</span>
+<span class="nc" id="L11">	            System.out.println(&quot;********* Welcome to the Console Menu *********&quot;);</span>
+<span class="nc" id="L12">	            System.out.println(&quot;1. To initialize the room enter I followed by an integer:&quot;);</span>
+<span class="nc" id="L13">	            System.out.println(&quot;2. To Print the current position of the robot enter C:&quot;);</span>
+<span class="nc" id="L14">	            System.out.println(&quot;3. To pen up enter U:&quot;);</span>
+<span class="nc" id="L15">	            System.out.println(&quot;4. To pen down enter D:&quot;);</span>
+<span class="nc" id="L16">	            System.out.println(&quot;5. To Turn right enter R:&quot;);</span>
+<span class="nc" id="L17">	            System.out.println(&quot;6. To Turn left enter L:&quot;);</span>
+<span class="nc" id="L18">	            System.out.println(&quot;7. To move the robot forward enter M followed by an integer:&quot;);</span>
+<span class="nc" id="L19">	            System.out.println(&quot;8. To print the room enter P:&quot;);</span>
+<span class="nc" id="L20">	            System.out.println(&quot;9. To Stop the program enter Q:&quot;);</span>
+<span class="nc" id="L21">	            System.out.println(&quot;************************************************&quot;);</span>
+<span class="nc" id="L22">	            System.out.print(&quot;Enter your choice:&quot;);</span>
+<span class="nc" id="L23">	            choice = scanner.nextLine();</span>
+<span class="nc" id="L24">	            String number=&quot;&quot;;</span>
+<span class="nc" id="L25">	            choice=choice.trim().replaceAll(&quot;\\s&quot;, &quot;&quot;).toLowerCase();</span>
+<span class="nc bnc" id="L26" title="All 4 branches missed.">	            if(choice.contains(&quot;m&quot;)||choice.trim().replaceAll(&quot;\\s&quot;, &quot;&quot;).toLowerCase().contains(&quot;i&quot;)) {</span>
+<span class="nc" id="L27">	            	number=App.getNumber(choice);</span>
+<span class="nc" id="L28">	            	choice=App.convertInput(choice);</span>
+	            }
+	            try {
+<span class="nc bnc" id="L31" title="All 10 branches missed.">	            switch (choice) {</span>
+	                case &quot;i&quot;:
+<span class="nc" id="L33">	                	App.initiateTheRoom(number);</span>
+<span class="nc" id="L34">	                	isStarted=true;</span>
+<span class="nc" id="L35">	                    break;</span>
+	                case &quot;c&quot;:
+<span class="nc bnc" id="L37" title="All 2 branches missed.">	                	if(isStarted)</span>
+<span class="nc" id="L38">	                	App.printThCurrentPositionOfRobot();</span>
+	                    break;
+	                case &quot;u&quot;:
+<span class="nc bnc" id="L41" title="All 2 branches missed.">	                	if(isStarted)</span>
+<span class="nc" id="L42">	                	App.robot.setPenUp();</span>
+	                    break;
+	                case &quot;d&quot;:
+<span class="nc bnc" id="L45" title="All 2 branches missed.">	                	if(isStarted)</span>
+<span class="nc" id="L46">	                	App.robot.setPenDown();</span>
+	                    break;
+	                case &quot;r&quot;:
+<span class="nc bnc" id="L49" title="All 2 branches missed.">	                	if(isStarted)</span>
+<span class="nc" id="L50">	                	App.robot.turnRight();</span>
+	                    break;
+	                case &quot;l&quot;:
+<span class="nc bnc" id="L53" title="All 2 branches missed.">	                	if(isStarted)</span>
+<span class="nc" id="L54">	                	App.robot.turnLeft();</span>
+	                    break;
+	                case &quot;m&quot;:
+<span class="nc bnc" id="L57" title="All 2 branches missed.">	                	if(isStarted)</span>
+<span class="nc" id="L58">	                	App.move(number);</span>
+	                    break;
+	                case &quot;p&quot;:
+	                	
+<span class="nc bnc" id="L62" title="All 2 branches missed.">	                	if(isStarted)</span>
+<span class="nc" id="L63">	                	App.room.print();</span>
+	                    break;
+	                case &quot;q&quot;:
+<span class="nc" id="L66">	                    System.out.println(&quot; Exit the program....&quot;);</span>
+<span class="nc" id="L67">	                    break;    </span>
+	                default:
+<span class="nc" id="L69">	                    System.out.println(&quot;Invalid choice. Please try again.&quot;);</span>
+	                    break;
+	            }
+<span class="nc" id="L72">	            }catch(NumberFormatException e) {</span>
+<span class="nc" id="L73">	            	System.out.println(&quot;Invalid input format. Please provide a valid number.&quot;);</span>
+<span class="nc" id="L74">	            }</span>
+<span class="nc" id="L75">	            System.out.println(); // Add a line break for readability</span>
+<span class="nc" id="L76">	        }</span>
+
+<span class="nc" id="L78">	        scanner.close();</span>
+<span class="nc" id="L79">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
